@@ -546,6 +546,22 @@ ul {
   align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  .last {
+    display: block;
+    text-align: center;
+  }
+}
+
+.company div {
+  display: inline-block;
+  margin: 10px;
+}
+
 .company img {
-  height: 20px;
+  height: 18px;
+}
+
+.copyright h5 {
+  margin-right: 10px;
 }
