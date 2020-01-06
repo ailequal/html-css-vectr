@@ -14,6 +14,7 @@ body {
 h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 40px;
+  color: #ffffff;
 }
 
 h2 {
@@ -30,18 +31,10 @@ ul {
   list-style: none;
 }
 
-/* nav {
-  font-size: 14px;
-} */
-
 .dark {
   background-color: rgb(33, 33, 33);
   color: #84949a;
 }
-
-/* .dark nav {
-  color: #536970;
-} */
 
 .light {
   background-color: rgb(255, 255, 255);
@@ -60,11 +53,18 @@ ul {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: auto;
+  padding: 0 20px;
 }
 
 /* header */
+/* nav_bar */
+.nav_bar {
+  border-bottom: 1px solid rgba(66,77,81,0.25);
+  font-size: 14px;
+}
+
 .nav_bar ul {
   display: flex;
   justify-content: flex-end;
@@ -79,6 +79,12 @@ ul {
 
 .nav_bar li:not(:first-child) {
   margin-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav_bar li:not(:first-child):not(:last-child) {
+    display: none;
+  }
 }
 
 .nav_bar li:first-child {
@@ -117,4 +123,86 @@ ul {
 .login:hover {
   color: #a1de41;
   padding: 5px 10px;
+}
+
+.hamburger {
+  position: relative;
+  width: 34px;
+  height: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #eceeef;
+}
+
+.hamburger::before {
+  position: absolute;
+  top: 12px;
+  width: 34px;
+  height: 5px;
+  border-radius: 5px;
+  content: '';
+  background-color: #eceeef;
+}
+
+.hamburger::after {
+  position: absolute;
+  top: -12px;
+  width: 34px;
+  height: 5px;
+  border-radius: 5px;
+  content: '';
+  background-color: #eceeef;
+}
+
+@media screen and (min-width: 768px) {
+  .nav_bar li:last-child {
+    display: none;
+  }
+}
+
+/* jumbotron */
+.jumbotron {
+  text-align: center;
+}
+
+.jumbotron div {
+  margin: 50px 0;
+}
+
+@media screen and (max-width: 576px) {
+  .jumbotron div {
+    margin: 20px 0;
+  }
+}
+
+.jumbotron h1 {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 576px) {
+  .jumbotron h1 {
+    font-size: 28px;
+  }
+}
+
+.jumbotron p {
+  max-width: 750px;
+  margin: 0 auto 20px auto;
+}
+
+.use {
+  /* display: block; */
+  border-color: #a1de41;
+  padding: 10px 20px;
+}
+
+.use:hover {
+  color: #a1de41;
+}
+
+.jumbotron img {
+  display: block;
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
 }
