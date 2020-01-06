@@ -22,6 +22,11 @@ h2 {
   font-size: 32px;
 }
 
+h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -386,6 +391,7 @@ ul {
 /* vector */
 .vector {
   padding: 80px 0;
+  border-bottom: 2px solid lightgrey;
 }
 
 .vector_box {
@@ -420,6 +426,9 @@ ul {
 
 .scale {
   flex-basis: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -428,15 +437,115 @@ ul {
   }
 }
 
+@media screen and (max-width: 576px) {
+  .scale {
+    display: block;
+  }
+}
+
+.scale div {
+  padding: 20px;
+}
+
 .scale img {
   display: block;
-  max-width: 100px;
+  max-width: 200px;
   width: 100%;
   margin: auto;
 }
 
+/* features */
+.features {
+
+}
+
+.features_box {
+  display: flex;
+  text-align: center;
+}
+
 @media screen and (max-width: 768px) {
-  .scale img {
-    max-width: 50px;
+  .features_box {
+    display: block;
   }
+}
+
+.free_forever,
+.cross_platform {
+  padding: 80px 20px;
+}
+
+.free_forever {
+  border-right: 1px solid lightgrey;
+}
+
+.cross_platform {
+  border-left: 1px solid lightgrey;
+}
+
+@media screen and (max-width: 768px) {
+  .free_forever {
+    border-right: 0 solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+  }
+
+  .cross_platform {
+    border-left: 0 solid lightgrey;
+    border-top: 1px solid lightgrey;
+  }
+}
+
+.features_box img {
+  max-width: 300px;
+  width: 100%;
+}
+
+/* footer */
+/* spacer */
+.spacer {
+  height: 80px;
+  border-bottom: 2px solid lightgrey;
+}
+
+/* site_map */
+.site_map {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .site_map {
+    display: none;
+  }
+}
+
+.site_map h5 {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #c0d0d8;
+}
+
+.site_map li {
+  margin-bottom: 5px;
+}
+
+/* language */
+.language a {
+  margin: 10px;
+  padding: 10px 50px 10px 10px;
+  border: 2px solid lightblue;
+  border-radius: 10px;
+}
+
+/* copyright */
+.last {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company img {
+  height: 20px;
 }
